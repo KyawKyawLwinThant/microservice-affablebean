@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+<div class="container mt-5 p-3">
+  <h3>Checkout</h3>
+  <div th:if="${transfererror}" class="alert alert-danger" role="alert">
+    <p>Transfer Error!</p>
+  </div>
+  <p class="lead">In order to purchase the items in your shopping cart,
+  please provide us the following information.</p>
+  <div class="row">
+    <div class="col-md-6">
+
+      <a th:href="@{/ui/transfer}" class="btn btn-primary my-5">Pay</a>
+      <a th:href="@{/ui/transport}" class="btn btn-info my-5 ml-2">Transport</a>
+    </div>
+    <div class="col-md-6">
+      <ul>
+        <li>Next-day delivery is guaranteed</li>
+        <li>A $3.00 delivery surcharge is applied
+        to all purchase order</li>
+      </ul>
+      <div id="charge-info">
+        <div class="row">
+          <div class="col-md-6">SubTotal: </div>
+          <div class="col-md-6"><span th:text="${'$'+ total}"></span></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Delivery Charge:</div>
+          <div class="col-md-6"> $3.00</div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">total:</div>
+          <div class="col-md-6"><span th:text="${'$'+ (total + 3)}"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

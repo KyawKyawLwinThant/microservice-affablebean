@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: payment-gateway
+  datasource:
+    url: jdbc:mysql://localhost:3306/affablebean
+    username: root
+    password: kyaw549235
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8090
+

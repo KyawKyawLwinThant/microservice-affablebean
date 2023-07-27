@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: transportation-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/affablebean
+    username: root
+    password: kyaw549235
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9000

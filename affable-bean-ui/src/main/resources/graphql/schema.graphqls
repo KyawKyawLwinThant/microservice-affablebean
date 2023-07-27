@@ -1,0 +1,14 @@
+
+scalar Date @specifiedBy(url: "https://tools.ietf.org/html/rfc3339")
+
+type Query{
+    cartItems:[CartItem]
+}
+type CartItem{
+    id:ID,
+    name:String,
+    price:Float,
+    description:String,
+    quantity:Int,
+    lastUpdate:Date
+}

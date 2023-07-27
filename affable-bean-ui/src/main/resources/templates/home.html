@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div class="container p-3 mt-3">
+        <div th:if="${transfer}" class="alert alert-success" role="alert">
+            <p>Successfully Transfered</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Welcome to the online home of the Affable Bean Green Grocer.</h3>
+                <br>
+                <p class="lead">Enjoy browsing and learning more about our
+                    unique home delivery service bringing you fresh
+                    organic produce,dairy,meats,breads and other
+                    delicious and healthy items to you doorstep.</p>
+            </div>
+            <div class="col">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <a th:href="@{'/ui/product/category?id=1'}"><img src="../static/bootstrap/images/categories/dairy.jpg"
+                             th:src="@{/bootstrap/images/categories/dairy.jpg}"
+                                        alt="image" class="img-fluid"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a th:href="@{'/ui/product/category?id=2'}"><img src="../static/bootstrap/images/categories/meats.jpg"
+                             th:src="@{/bootstrap/images/categories/meats.jpg}"
+                             alt="image" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a  th:href="@{'/ui/product/category?id=3'}"><img src="../static/bootstrap/images/categories/bakery.jpg"
+                             th:src="@{/bootstrap/images/categories/bakery.jpg}"
+                             class="img-fluid"
+                                        alt="image"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a th:href="@{'/ui/product/category?id=4'}"><img src="../static/bootstrap/images/categories/fruitveg.jpg"
+                             th:src="@{/bootstrap/images/categories/fruitveg.jpg}"
+                             class="img-fluid"
+                                        alt="image"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
